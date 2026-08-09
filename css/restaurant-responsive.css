@@ -1,0 +1,541 @@
+/*
+=========================================================
+CZ MENU PLATFORM
+Restaurant Responsive Styles
+File:
+css/restaurant-responsive.css
+
+Purpose:
+- Mobile optimization
+- Tablet optimization
+- Small-screen navigation
+- Responsive menu cards
+- Responsive hero sections
+- Responsive contact sections
+- Responsive spacing
+
+IMPORTANT:
+Do not place restaurant content here.
+Content is controlled through restaurant data.
+=========================================================
+*/
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .restaurant-menu-items {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-highlights {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .restaurant-contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .restaurant-cta {
+        gap: 1.5rem;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .restaurant-header__inner {
+        min-height: 58px;
+
+        gap: 0.5rem;
+    }
+
+
+    .restaurant-header__brand {
+        gap: 0.45rem;
+
+        max-width: 48%;
+    }
+
+
+    .restaurant-header__brand img {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    .restaurant-header__brand span {
+        max-width: 125px;
+
+        font-size: 0.78rem;
+    }
+
+
+    .restaurant-header__nav {
+        gap: 0.15rem;
+    }
+
+
+    .restaurant-header__nav a {
+        padding:
+            0.45rem
+            0.5rem;
+
+        font-size: 0.68rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU HERO
+       ----------------------------------------------------- */
+
+    .restaurant-menu-hero {
+        min-height: 560px;
+    }
+
+
+    .restaurant-menu-hero__content {
+        padding-top: 7rem;
+        padding-bottom: 2.5rem;
+    }
+
+
+    .restaurant-menu-hero__content h1 {
+        font-size:
+            clamp(
+                2.35rem,
+                12vw,
+                4rem
+            );
+
+        line-height: 1;
+    }
+
+
+    .restaurant-menu-hero__content > p {
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+    }
+
+
+    .restaurant-brand {
+        margin-bottom: 1rem;
+    }
+
+
+    .restaurant-brand__logo {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .restaurant-meta {
+        gap: 0.4rem;
+    }
+
+
+    .restaurant-meta__item {
+        padding:
+            0.45rem
+            0.6rem;
+
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU HEADER
+       ----------------------------------------------------- */
+
+    .restaurant-section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 0.8rem;
+    }
+
+
+    .restaurant-menu-toggle {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       SEARCH
+       ----------------------------------------------------- */
+
+    .restaurant-search {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0.65rem;
+
+        padding: 0.5rem;
+    }
+
+
+    .restaurant-search__input {
+        min-height: 44px;
+    }
+
+
+    .restaurant-filter {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+
+    .filter-button {
+        width: 100%;
+
+        padding:
+            0.65rem
+            0.4rem;
+    }
+
+
+    /* -----------------------------------------------------
+       MENU CATEGORY
+       ----------------------------------------------------- */
+
+    .restaurant-menu-category {
+        margin-top: 2.25rem;
+    }
+
+
+    .restaurant-menu-category__heading h3 {
+        font-size:
+            var(--font-size-lg);
+    }
+
+
+    /* -----------------------------------------------------
+       MENU ITEM
+       ----------------------------------------------------- */
+
+    .restaurant-menu-items {
+        grid-template-columns: 1fr;
+
+        gap: 0.65rem;
+    }
+
+
+    .menu-item {
+        grid-template-columns:
+            70px
+            minmax(0, 1fr);
+
+        min-height: 100px;
+
+        gap: 0.8rem;
+
+        padding: 0.6rem;
+
+        border-radius:
+            var(--radius-lg);
+    }
+
+
+    .menu-item__image {
+        width: 70px;
+        height: 70px;
+
+        border-radius:
+            var(--radius-md);
+    }
+
+
+    .menu-item__name {
+        font-size:
+            var(--font-size-sm);
+
+        padding-right: 0.8rem;
+    }
+
+
+    .menu-item__price {
+        font-size:
+            var(--font-size-xs);
+    }
+
+
+    .menu-item__description {
+        font-size: 10px;
+
+        line-height: 1.5;
+    }
+
+
+    .menu-item__variant {
+        font-size: 9px;
+    }
+
+
+    .menu-item__type {
+        top: 0.65rem;
+
+        right: 0.65rem;
+    }
+
+
+    .menu-item__unavailable {
+        right: 0.6rem;
+
+        bottom: 0.6rem;
+
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       RESTAURANT HOME
+       ----------------------------------------------------- */
+
+    .restaurant-page-hero {
+        min-height: 570px;
+    }
+
+
+    .restaurant-page-hero__content {
+        padding-top: 7rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+
+    .restaurant-page-hero__content h1 {
+        font-size:
+            clamp(
+                2.35rem,
+                12vw,
+                4rem
+            );
+
+        line-height: 1;
+    }
+
+
+    .restaurant-page-hero__content p {
+        font-size: 0.9rem;
+
+        line-height: 1.65;
+    }
+
+
+    .restaurant-introduction {
+        text-align: left;
+    }
+
+
+    .restaurant-highlights {
+        grid-template-columns: 1fr;
+
+        gap: 0.75rem;
+    }
+
+
+    .restaurant-highlight {
+        min-height: 150px;
+
+        padding: 1.25rem;
+    }
+
+
+    .restaurant-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 1.4rem;
+
+        border-radius:
+            var(--radius-xl);
+    }
+
+
+    .restaurant-cta .btn {
+        width: 100%;
+    }
+
+
+    /* -----------------------------------------------------
+       CONTACT
+       ----------------------------------------------------- */
+
+    .restaurant-contact-hero {
+        padding-bottom: 1rem;
+    }
+
+
+    .restaurant-contact-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0.75rem;
+    }
+
+
+    .restaurant-contact-card {
+        padding: 0.85rem;
+
+        border-radius:
+            var(--radius-lg);
+    }
+
+
+    .restaurant-map-placeholder {
+        min-height: 260px;
+
+        border-radius:
+            var(--radius-xl);
+    }
+
+
+    /* -----------------------------------------------------
+       POWERED BY
+       ----------------------------------------------------- */
+
+    .restaurant-powered {
+        padding:
+            1.25rem
+            0;
+    }
+
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .restaurant-header__brand {
+        max-width: 42%;
+    }
+
+
+    .restaurant-header__brand span {
+        max-width: 95px;
+
+        font-size: 0.7rem;
+    }
+
+
+    .restaurant-header__nav a {
+        padding:
+            0.4rem
+            0.38rem;
+
+        font-size: 0.62rem;
+    }
+
+
+    .restaurant-menu-hero {
+        min-height: 520px;
+    }
+
+
+    .restaurant-menu-hero__content {
+        padding-bottom: 2rem;
+    }
+
+
+    .restaurant-brand__logo {
+        width: 54px;
+        height: 54px;
+    }
+
+
+    .restaurant-status {
+        padding:
+            0.35rem
+            0.55rem;
+
+        font-size: 9px;
+    }
+
+
+    .menu-item {
+        grid-template-columns:
+            62px
+            minmax(0, 1fr);
+
+        gap: 0.65rem;
+    }
+
+
+    .menu-item__image {
+        width: 62px;
+        height: 62px;
+    }
+
+
+    .menu-item__title-row {
+        gap: 0.35rem;
+    }
+
+
+    .menu-item__name {
+        font-size: 0.82rem;
+    }
+
+
+    .menu-item__price {
+        font-size: 0.7rem;
+    }
+
+
+    .menu-item__description {
+        font-size: 9px;
+    }
+
+
+    .restaurant-page-hero {
+        min-height: 520px;
+    }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .restaurant-site *,
+    .restaurant-site *::before,
+    .restaurant-site *::after {
+        scroll-behavior: auto !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+
+}

@@ -1,0 +1,24 @@
+/* CZ Menu Restaurant Admin — premium baseline */
+.admin-site{min-height:100vh;background:var(--color-background,#0b0f14);color:var(--color-text,#f5f7fa)}
+.admin-app{min-height:100vh;display:flex}
+.admin-sidebar{width:280px;min-height:100vh;position:fixed;inset:0 auto 0 0;z-index:50;background:rgba(15,20,28,.72);backdrop-filter:blur(24px);border-right:1px solid rgba(255,255,255,.1);padding:22px;display:flex;flex-direction:column}
+.admin-main{margin-left:280px;width:calc(100% - 280px);min-height:100vh;padding:28px}
+.admin-topbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
+.admin-content,.admin-section{max-width:1400px;margin:auto}
+.admin-section{margin-bottom:28px}
+.glass{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 60px rgba(0,0,0,.18);backdrop-filter:blur(22px)}
+.admin-form{padding:24px;border-radius:24px}
+.admin-form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.admin-form-grid--full{grid-column:1/-1}
+.form-field{display:flex;flex-direction:column;gap:8px;margin-bottom:18px}
+.form-field input,.form-field textarea,.form-field select,.admin-select{width:100%;padding:13px 15px;border-radius:14px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.06);color:inherit;outline:none}
+.form-field input:focus,.form-field textarea:focus,.form-field select:focus{border-color:rgba(255,255,255,.35);box-shadow:0 0 0 4px rgba(255,255,255,.05)}
+.admin-form-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:18px}
+.btn{border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 18px;cursor:pointer;transition:transform .2s ease,opacity .2s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-primary{background:rgba(255,255,255,.14);color:inherit}.btn-secondary{background:transparent;color:inherit}
+.admin-template-card,.admin-theme-card{border:1px solid rgba(255,255,255,.1);border-radius:20px;background:rgba(255,255,255,.04);color:inherit;cursor:pointer;overflow:hidden;transition:transform .25s ease,border-color .25s ease}
+.admin-template-card:hover,.admin-theme-card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.3)}
+.appearance-image-preview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin:20px 0}.appearance-image-preview>div{padding:14px;border-radius:18px;background:rgba(255,255,255,.04)}.appearance-image-preview img{width:100%;max-height:260px;object-fit:cover;border-radius:14px;margin-top:10px}
+.admin-sidebar__top,.admin-sidebar__restaurant,.admin-sidebar__bottom{display:flex;align-items:center;gap:12px}.admin-sidebar__top{justify-content:space-between}.admin-sidebar__restaurant{margin:25px 0;padding:14px;border-radius:18px;background:rgba(255,255,255,.05)}.admin-sidebar__bottom{margin-top:auto;flex-direction:column;align-items:stretch}.admin-nav{display:flex;flex-direction:column;gap:6px}.admin-nav__item{display:flex;gap:12px;align-items:center;padding:12px 14px;border-radius:14px;color:inherit;text-decoration:none;opacity:.8}.admin-nav__item:hover,.admin-nav__item.is-active{background:rgba(255,255,255,.08);opacity:1}.admin-brand{display:flex;align-items:center;gap:10px;color:inherit;text-decoration:none;font-weight:700}.admin-brand img{width:34px;height:34px}.admin-view-site,.admin-logout{padding:12px 14px;border-radius:14px;text-decoration:none;color:inherit;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);cursor:pointer}.admin-sidebar-overlay,.admin-sidebar-close,.admin-sidebar-open{display:none}
+@media(max-width:1000px){.admin-sidebar{transform:translateX(-105%);transition:transform .25s ease}.admin-sidebar.is-open{transform:translateX(0)}.admin-main{margin-left:0;width:100%;padding:18px}.admin-sidebar-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40}.admin-sidebar-overlay:not([hidden]){display:block}.admin-sidebar-close,.admin-sidebar-open{display:block}.admin-form-grid,.appearance-image-preview{grid-template-columns:1fr}}

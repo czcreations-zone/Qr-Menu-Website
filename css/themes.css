@@ -1,0 +1,2 @@
+/* Central restaurant theme hooks. Theme definitions live in js/config/themes.js. */
+[data-theme]{transition:background-color .25s ease,color .25s ease,border-color .25s ease}

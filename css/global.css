@@ -1,0 +1,321 @@
+
+/* =========================================================
+   GLOBAL RESET
+   ========================================================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        var(--gradient-background),
+        var(--color-background);
+
+    color: var(--color-text);
+
+    font-family: var(--font-primary);
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   BASIC ELEMENTS
+   ========================================================= */
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text);
+
+    font-family: var(--font-heading);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: clamp(
+        2.5rem,
+        7vw,
+        var(--font-size-6xl)
+    );
+}
+
+h2 {
+    font-size: clamp(
+        2rem,
+        5vw,
+        var(--font-size-5xl)
+    );
+}
+
+h3 {
+    font-size: clamp(
+        1.4rem,
+        3vw,
+        var(--font-size-3xl)
+    );
+}
+
+p {
+    color: var(--color-text-secondary);
+}
+
+::selection {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* =========================================================
+   PAGE CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        calc(100% - (var(--page-padding) * 2)),
+        var(--container-xl)
+    );
+
+    margin-inline: auto;
+}
+
+.container-wide {
+    width: min(
+        calc(100% - (var(--page-padding) * 2)),
+        var(--container-2xl)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+.section {
+    position: relative;
+
+    padding-block: var(--section-padding);
+
+    isolation: isolate;
+}
+
+.section-header {
+    max-width: 760px;
+
+    margin-bottom: var(--space-12);
+}
+
+.section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    margin-bottom: var(--space-4);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.section-title {
+    margin-bottom: var(--space-5);
+}
+
+.section-description {
+    max-width: 680px;
+
+    font-size: var(--font-size-lg);
+
+    line-height: 1.75;
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+   ========================================================= */
+
+.background-orb {
+    position: absolute;
+
+    width: 300px;
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(108, 99, 255, 0.25),
+            transparent 70%
+        );
+
+    filter: blur(30px);
+
+    pointer-events: none;
+
+    z-index: -1;
+}
+
+.background-orb--top {
+    top: 0;
+    right: 5%;
+}
+
+.background-orb--bottom {
+    bottom: 0;
+    left: 5%;
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+    :root {
+        --header-height: 66px;
+
+        --section-padding: 4rem;
+    }
+
+    html {
+        font-size: 15px;
+    }
+
+    .section-header {
+        margin-bottom: var(--space-8);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --section-padding: 3.5rem;
+    }
+
+    .section-description {
+        font-size: var(--font-size-md);
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
