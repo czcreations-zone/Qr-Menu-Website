@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Restaurant Login | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[RESTAURANT ADMIN LOGIN DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+    <main class="auth-page">
+
+        <div class="auth-background">
+
+            <div class="auth-orb auth-orb-one"></div>
+
+            <div class="auth-orb auth-orb-two"></div>
+
+        </div>
+
+
+        <div class="auth-container">
+
+            <a
+                href="/index.html"
+                class="auth-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo.svg"
+                    alt="CZ"
+                >
+
+            </a>
+
+
+            <section
+                class="
+                    auth-card
+                    glass
+                    reveal
+                "
+            >
+
+                <div class="auth-header">
+
+                    <span class="section-label">
+                        [ADMIN LOGIN LABEL]
+                    </span>
+
+                    <h1>
+                        Restaurant Login
+                    </h1>
+
+                    <p>
+                        [RESTAURANT LOGIN DESCRIPTION]
+                    </p>
+
+                </div>
+
+
+                <form
+                    id="admin-login-form"
+                    class="auth-form"
+                    novalidate
+                >
+
+                    <div class="form-field">
+
+                        <label
+                            for="admin-email"
+                        >
+                            Email
+                        </label>
+
+                        <input
+                            id="admin-email"
+                            name="email"
+                            type="email"
+                            autocomplete="email"
+                            placeholder="[EMAIL PLACEHOLDER]"
+                            required
+                        >
+
+                        <small
+                            class="form-error"
+                            data-error-for="email"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <div
+                            class="
+                                form-label-row
+                            "
+                        >
+
+                            <label
+                                for="admin-password"
+                            >
+                                Password
+                            </label>
+
+                            <a
+                                href="/pages/restaurant-admin/forgot-password.html"
+                            >
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <div
+                            class="password-field"
+                        >
+
+                            <input
+                                id="admin-password"
+                                name="password"
+                                type="password"
+                                autocomplete="current-password"
+                                placeholder="[PASSWORD PLACEHOLDER]"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                data-password-toggle
+                                aria-label="Show password"
+                            >
+                                Show
+                            </button>
+
+                        </div>
+
+                        <small
+                            class="form-error"
+                            data-error-for="password"
+                        ></small>
+
+                    </div>
+
+
+                    <div
+                        id="admin-login-message"
+                        class="auth-message"
+                        hidden
+                    ></div>
+
+
+                    <button
+                        type="submit"
+                        class="
+                            btn
+                            btn-primary
+                            btn-full
+                        "
+                        id="admin-login-button"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+
+                <div class="auth-divider">
+
+                    <span>
+                        OR
+                    </span>
+
+                </div>
+
+
+                <div class="auth-footer">
+
+                    <p>
+                        Don't have an account?
+                    </p>
+
+                    <a
+                        href="/pages/restaurant-admin/signup.html"
+                        class="btn btn-secondary btn-full"
+                    >
+                        Create Restaurant Account
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="/index.html"
+                    class="auth-back"
+                >
+                    ← Back to CZ
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <script
+        type="module"
+        src="/js/admin/auth.js"
+    ></script>
+
+</body>
+
+</html>

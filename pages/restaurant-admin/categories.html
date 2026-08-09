@@ -1,0 +1,581 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Categories | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[CATEGORY MANAGEMENT DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+<div class="admin-app">
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar__top">
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>
+                    CZ Menu
+                </span>
+
+            </a>
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="admin-sidebar-close"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-sidebar__restaurant">
+
+            <div
+                class="admin-restaurant-avatar"
+                id="admin-restaurant-avatar"
+            >
+                R
+            </div>
+
+            <div>
+
+                <strong id="admin-restaurant-name">
+                    [RESTAURANT NAME]
+                </strong>
+
+                <small>
+                    Restaurant Admin
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav
+            class="admin-nav"
+            aria-label="Restaurant admin navigation"
+        >
+
+            <span class="admin-nav__label">
+                [NAVIGATION LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/restaurant-info.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◎</span>
+                <span>Restaurant Info</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/categories.html"
+                class="admin-nav__item is-active"
+            >
+                <span class="admin-nav__icon">◫</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/menu.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">≡</span>
+                <span>Menu</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/appearance.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">✦</span>
+                <span>Appearance</span>
+            </a>
+
+
+            <span class="admin-nav__label">
+                [MANAGEMENT LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/activity.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/settings.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/account.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">○</span>
+                <span>Account</span>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar__bottom">
+
+            <a
+                href="/pages/restaurant/index.html"
+                class="admin-view-site"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ↗ View Restaurant Website
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-logout"
+                id="admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="admin-sidebar-overlay"
+        hidden
+    ></div>
+
+
+    <!-- MAIN -->
+
+    <div class="admin-main">
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar__left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="admin-menu-button"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+                <div>
+
+                    <span class="admin-topbar__eyebrow">
+                        [CATEGORY MANAGEMENT LABEL]
+                    </span>
+
+                    <h1>
+                        Categories
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar__right">
+
+                <a
+                    href="/pages/restaurant/index.html"
+                    class="admin-topbar-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Menu
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <main class="admin-content">
+
+
+            <!-- HEADER -->
+
+            <section
+                class="admin-welcome glass reveal"
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [CATEGORY LABEL]
+                    </span>
+
+                    <h2>
+                        Organize Your Menu
+                    </h2>
+
+                    <p>
+                        [CATEGORY PAGE DESCRIPTION]
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="add-category-button"
+                >
+                    + Add Category
+                </button>
+
+            </section>
+
+
+            <!-- CATEGORY LIST -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [CATEGORY LIST LABEL]
+                        </span>
+
+                        <h2>
+                            Menu Categories
+                        </h2>
+
+                    </div>
+
+                    <span
+                        id="category-count"
+                        class="admin-count"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="admin-category-list"
+                    id="category-list"
+                >
+
+                    <div
+                        class="admin-empty-state glass"
+                        id="category-empty"
+                    >
+
+                        <div>
+                            ◫
+                        </div>
+
+                        <h3>
+                            [NO CATEGORY TITLE]
+                        </h3>
+
+                        <p>
+                            [NO CATEGORY DESCRIPTION]
+                        </p>
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            id="empty-add-category"
+                        >
+                            + Add First Category
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            class="admin-back-button"
+            id="admin-back-button"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- CATEGORY MODAL -->
+
+<div
+    class="admin-modal"
+    id="category-modal"
+    hidden
+>
+
+    <div
+        class="admin-modal__backdrop"
+        data-modal-close
+    ></div>
+
+
+    <section
+        class="
+            admin-modal__content
+            glass
+        "
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="category-modal-title"
+    >
+
+        <button
+            type="button"
+            class="admin-modal__close"
+            data-modal-close
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <div class="admin-modal__header">
+
+            <span class="section-label">
+                [CATEGORY FORM LABEL]
+            </span>
+
+            <h2 id="category-modal-title">
+                Add Category
+            </h2>
+
+            <p>
+                [CATEGORY FORM DESCRIPTION]
+            </p>
+
+        </div>
+
+
+        <form
+            id="category-form"
+            class="admin-form"
+        >
+
+            <input
+                type="hidden"
+                id="category-id"
+            >
+
+
+            <div class="form-field">
+
+                <label for="category-name">
+                    Category Name
+                </label>
+
+                <input
+                    id="category-name"
+                    name="name"
+                    type="text"
+                    placeholder="[CATEGORY NAME]"
+                    required
+                >
+
+                <small
+                    class="form-error"
+                    id="category-name-error"
+                ></small>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label for="category-description">
+                    Description
+                </label>
+
+                <textarea
+                    id="category-description"
+                    name="description"
+                    rows="4"
+                    placeholder="[OPTIONAL CATEGORY DESCRIPTION]"
+                ></textarea>
+
+            </div>
+
+
+            <div class="form-field">
+
+                <label>
+                    Status
+                </label>
+
+                <label class="admin-switch">
+
+                    <input
+                        type="checkbox"
+                        id="category-active"
+                        checked
+                    >
+
+                    <span>
+                        Category visible
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <div
+                id="category-form-message"
+                class="auth-message"
+                hidden
+            ></div>
+
+
+            <div class="admin-form-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-modal-close
+                >
+                    Cancel
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Save Category
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+
+
+<div
+    id="categories-toast"
+    class="admin-toast"
+    hidden
+></div>
+
+
+<script
+    type="module"
+    src="/js/admin/categories.js"
+></script>
+
+</body>
+
+</html>

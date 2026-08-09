@@ -1,0 +1,1152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Menu Management | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[MENU MANAGEMENT DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+<div class="admin-app">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar__top">
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>
+                    CZ Menu
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="admin-sidebar-close"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-sidebar__restaurant">
+
+            <div
+                class="admin-restaurant-avatar"
+                id="admin-restaurant-avatar"
+            >
+                R
+            </div>
+
+            <div>
+
+                <strong id="admin-restaurant-name">
+                    [RESTAURANT NAME]
+                </strong>
+
+                <small>
+                    Restaurant Admin
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav
+            class="admin-nav"
+            aria-label="Restaurant admin navigation"
+        >
+
+            <span class="admin-nav__label">
+                [NAVIGATION LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/restaurant-info.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◎</span>
+                <span>Restaurant Info</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/categories.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◫</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/menu.html"
+                class="admin-nav__item is-active"
+            >
+                <span class="admin-nav__icon">≡</span>
+                <span>Menu</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/appearance.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">✦</span>
+                <span>Appearance</span>
+            </a>
+
+
+            <span class="admin-nav__label">
+                [MANAGEMENT LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/activity.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/settings.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/account.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">○</span>
+                <span>Account</span>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar__bottom">
+
+            <a
+                href="/pages/restaurant/index.html"
+                class="admin-view-site"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ↗ View Restaurant Website
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-logout"
+                id="admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="admin-sidebar-overlay"
+        hidden
+    ></div>
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
+    <div class="admin-main">
+
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar__left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="admin-menu-button"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span class="admin-topbar__eyebrow">
+                        [MENU MANAGEMENT LABEL]
+                    </span>
+
+                    <h1>
+                        Menu
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar__right">
+
+                <a
+                    href="/pages/restaurant/index.html"
+                    class="admin-topbar-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Menu
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <main class="admin-content">
+
+
+            <!-- =================================================
+                 MENU HEADER
+                 ================================================= -->
+
+            <section
+                class="admin-welcome glass reveal"
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [MENU LABEL]
+                    </span>
+
+                    <h2>
+                        Manage Your Menu
+                    </h2>
+
+                    <p>
+                        [MENU PAGE DESCRIPTION]
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="add-menu-item-button"
+                >
+                    + Add Item
+                </button>
+
+            </section>
+
+
+            <!-- =================================================
+                 MENU TOOLBAR
+                 ================================================= -->
+
+            <section
+                class="
+                    admin-menu-toolbar
+                    glass
+                "
+            >
+
+                <div class="admin-search">
+
+                    <label
+                        for="menu-search"
+                        class="sr-only"
+                    >
+                        Search menu
+                    </label>
+
+                    <span>
+                        ⌕
+                    </span>
+
+                    <input
+                        id="menu-search"
+                        type="search"
+                        placeholder="[SEARCH MENU PLACEHOLDER]"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="admin-menu-filter">
+
+                    <label
+                        for="menu-category-filter"
+                        class="sr-only"
+                    >
+                        Filter by category
+                    </label>
+
+                    <select
+                        id="menu-category-filter"
+                    >
+
+                        <option value="all">
+                            [ALL CATEGORIES LABEL]
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-menu-filter">
+
+                    <label
+                        for="menu-diet-filter"
+                        class="sr-only"
+                    >
+                        Filter by food type
+                    </label>
+
+                    <select
+                        id="menu-diet-filter"
+                    >
+
+                        <option value="all">
+                            [ALL FOOD TYPES LABEL]
+                        </option>
+
+                        <option value="veg">
+                            Veg
+                        </option>
+
+                        <option value="non-veg">
+                            Non-Veg
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="admin-menu-filter">
+
+                    <label
+                        for="menu-status-filter"
+                        class="sr-only"
+                    >
+                        Filter by availability
+                    </label>
+
+                    <select
+                        id="menu-status-filter"
+                    >
+
+                        <option value="all">
+                            [ALL STATUS LABEL]
+                        </option>
+
+                        <option value="available">
+                            Available
+                        </option>
+
+                        <option value="unavailable">
+                            Unavailable
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SUMMARY
+                 ================================================= -->
+
+            <section
+                class="
+                    admin-menu-summary
+                    reveal
+                "
+            >
+
+                <div>
+
+                    <span>
+                        Total Items
+                    </span>
+
+                    <strong id="menu-total-count">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Available
+                    </span>
+
+                    <strong id="menu-available-count">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Unavailable
+                    </span>
+
+                    <strong id="menu-unavailable-count">
+                        0
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Categories
+                    </span>
+
+                    <strong id="menu-category-count">
+                        0
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 MENU LIST
+                 ================================================= -->
+
+            <section class="admin-section">
+
+
+                <div
+                    class="admin-section-header"
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            [MENU ITEMS LABEL]
+                        </span>
+
+                        <h2>
+                            Menu Items
+                        </h2>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="clear-menu-filters"
+                    >
+                        Clear Filters
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="menu-items-list"
+                    class="admin-menu-items"
+                >
+
+                    <!-- Generated by JavaScript -->
+
+                </div>
+
+
+                <div
+                    id="menu-empty-state"
+                    class="
+                        admin-empty-state
+                        glass
+                    "
+                    hidden
+                >
+
+                    <div>
+                        ≡
+                    </div>
+
+                    <h3>
+                        [NO MENU ITEMS TITLE]
+                    </h3>
+
+                    <p>
+                        [NO MENU ITEMS DESCRIPTION]
+                    </p>
+
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        id="empty-add-menu-item"
+                    >
+                        + Add First Item
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="menu-no-results"
+                    class="
+                        admin-empty-state
+                        glass
+                    "
+                    hidden
+                >
+
+                    <div>
+                        ⌕
+                    </div>
+
+                    <h3>
+                        [NO SEARCH RESULTS TITLE]
+                    </h3>
+
+                    <p>
+                        [NO SEARCH RESULTS DESCRIPTION]
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 PUBLISH
+                 ================================================= -->
+
+            <section
+                class="
+                    admin-publish-panel
+                    glass
+                "
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [PUBLISH LABEL]
+                    </span>
+
+                    <h2>
+                        Publish Menu Changes
+                    </h2>
+
+                    <p>
+                        [MENU PUBLISH DESCRIPTION]
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="publish-menu-button"
+                >
+                    Publish
+                </button>
+
+            </section>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            class="admin-back-button"
+            id="admin-back-button"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     MENU ITEM EDITOR MODAL
+     ===================================================== -->
+
+<div
+    class="admin-modal"
+    id="menu-editor-modal"
+    hidden
+>
+
+    <div
+        class="admin-modal__backdrop"
+        data-menu-modal-close
+    ></div>
+
+
+    <section
+        class="
+            admin-modal__content
+            admin-menu-editor-modal
+            glass
+        "
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="menu-editor-title"
+    >
+
+        <button
+            type="button"
+            class="admin-modal__close"
+            data-menu-modal-close
+            aria-label="Close"
+        >
+            ×
+        </button>
+
+
+        <div class="admin-modal__header">
+
+            <span class="section-label">
+                [MENU ITEM FORM LABEL]
+            </span>
+
+            <h2 id="menu-editor-title">
+                Add Menu Item
+            </h2>
+
+            <p>
+                [MENU ITEM FORM DESCRIPTION]
+            </p>
+
+        </div>
+
+
+        <form
+            id="menu-item-form"
+            class="admin-form"
+            novalidate
+        >
+
+            <input
+                type="hidden"
+                id="menu-item-id"
+            >
+
+
+            <!-- BASIC -->
+
+            <div class="admin-form-grid">
+
+
+                <div class="form-field">
+
+                    <label for="menu-item-name">
+                        Item Name
+                    </label>
+
+                    <input
+                        id="menu-item-name"
+                        name="name"
+                        type="text"
+                        placeholder="[ITEM NAME]"
+                        required
+                    >
+
+                    <small
+                        class="form-error"
+                        id="menu-item-name-error"
+                    ></small>
+
+                </div>
+
+
+                <div class="form-field">
+
+                    <label for="menu-item-category">
+                        Category
+                    </label>
+
+                    <select
+                        id="menu-item-category"
+                        name="categoryId"
+                        required
+                    >
+
+                        <option value="">
+                            [SELECT CATEGORY]
+                        </option>
+
+                    </select>
+
+                    <small
+                        class="form-error"
+                        id="menu-item-category-error"
+                    ></small>
+
+                </div>
+
+
+                <div
+                    class="
+                        form-field
+                        admin-form-grid--full
+                    "
+                >
+
+                    <label for="menu-item-description">
+                        Description
+                        <span>
+                            [OPTIONAL]
+                        </span>
+                    </label>
+
+                    <textarea
+                        id="menu-item-description"
+                        name="description"
+                        rows="4"
+                        placeholder="[OPTIONAL ITEM DESCRIPTION]"
+                    ></textarea>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOD TYPE -->
+
+            <div class="form-field">
+
+                <label>
+                    Food Type
+                </label>
+
+
+                <div
+                    class="
+                        admin-choice-grid
+                    "
+                >
+
+                    <label
+                        class="
+                            admin-choice-card
+                            is-selected
+                        "
+                        id="veg-choice"
+                    >
+
+                        <input
+                            type="radio"
+                            name="foodType"
+                            value="veg"
+                            checked
+                        >
+
+                        <span
+                            class="food-indicator food-indicator--veg"
+                        ></span>
+
+                        <span>
+                            Veg
+                        </span>
+
+                    </label>
+
+
+                    <label
+                        class="admin-choice-card"
+                        id="nonveg-choice"
+                    >
+
+                        <input
+                            type="radio"
+                            name="foodType"
+                            value="non-veg"
+                        >
+
+                        <span
+                            class="food-indicator food-indicator--nonveg"
+                        ></span>
+
+                        <span>
+                            Non-Veg
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- AVAILABILITY -->
+
+            <div class="form-field">
+
+                <label>
+                    Availability
+                </label>
+
+
+                <label
+                    class="admin-switch"
+                >
+
+                    <input
+                        type="checkbox"
+                        id="menu-item-available"
+                        checked
+                    >
+
+                    <span>
+                        Item is available
+                    </span>
+
+                </label>
+
+            </div>
+
+
+            <!-- PRICE MODE -->
+
+            <div class="form-field">
+
+                <label>
+                    Price Type
+                </label>
+
+
+                <div
+                    class="
+                        admin-choice-grid
+                    "
+                >
+
+                    <label
+                        class="
+                            admin-choice-card
+                            is-selected
+                        "
+                        id="single-price-choice"
+                    >
+
+                        <input
+                            type="radio"
+                            name="priceMode"
+                            value="single"
+                            checked
+                        >
+
+                        <span>
+                            Single Price
+                        </span>
+
+                    </label>
+
+
+                    <label
+                        class="admin-choice-card"
+                        id="variant-price-choice"
+                    >
+
+                        <input
+                            type="radio"
+                            name="priceMode"
+                            value="variants"
+                        >
+
+                        <span>
+                            Multiple Prices
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </div>
+
+
+            <!-- SINGLE PRICE -->
+
+            <div
+                class="form-field"
+                id="single-price-field"
+            >
+
+                <label for="menu-item-price">
+                    Price
+                    <span>
+                        [CURRENCY]
+                    </span>
+                </label>
+
+                <input
+                    id="menu-item-price"
+                    name="price"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    inputmode="decimal"
+                    placeholder="[PRICE]"
+                >
+
+            </div>
+
+
+            <!-- VARIANTS -->
+
+            <div
+                class="form-field"
+                id="price-variants-field"
+                hidden
+            >
+
+                <div
+                    class="
+                        admin-form-label-row
+                    "
+                >
+
+                    <label>
+                        Price Variants
+                    </label>
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="add-price-variant"
+                    >
+                        + Add Price
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="price-variants-list"
+                    class="price-variants-list"
+                >
+
+                    <!-- Generated by JavaScript -->
+
+                </div>
+
+            </div>
+
+
+            <!-- IMAGE -->
+
+            <div class="form-field">
+
+                <label for="menu-item-image">
+                    Item Image
+                    <span>
+                        [OPTIONAL]
+                    </span>
+                </label>
+
+                <input
+                    id="menu-item-image"
+                    type="url"
+                    placeholder="[IMAGE URL]"
+                    autocomplete="off"
+                >
+
+                <input
+                    id="menu-item-image-file"
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                >
+
+                <div
+                    id="menu-item-image-upload-progress"
+                    class="form-help"
+                    hidden
+                ></div>
+
+                <small class="form-help">
+                    [IMAGE STORAGE DESCRIPTION]
+                </small>
+
+
+                <div
+                    id="menu-item-image-preview"
+                    class="menu-item-image-preview"
+                    hidden
+                >
+
+                    <img
+                        id="menu-item-image-preview-img"
+                        src=""
+                        alt="[MENU ITEM IMAGE ALT]"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM MESSAGE -->
+
+            <div
+                id="menu-item-form-message"
+                class="auth-message"
+                hidden
+            ></div>
+
+
+            <!-- ACTIONS -->
+
+            <div class="admin-form-actions">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-menu-modal-close
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                >
+                    Save Item
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+
+
+<div
+    id="menu-toast"
+    class="admin-toast"
+    hidden
+></div>
+
+
+<script
+    type="module"
+    src="/js/admin/menu.js"
+></script>
+
+</body>
+
+</html>

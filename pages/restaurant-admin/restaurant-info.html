@@ -1,0 +1,743 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Restaurant Information | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[RESTAURANT INFORMATION PAGE DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+<div class="admin-app">
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar__top">
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>
+                    CZ Menu
+                </span>
+
+            </a>
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="admin-sidebar-close"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-sidebar__restaurant">
+
+            <div
+                class="admin-restaurant-avatar"
+                id="admin-restaurant-avatar"
+            >
+                R
+            </div>
+
+            <div>
+
+                <strong id="admin-restaurant-name">
+                    [RESTAURANT NAME]
+                </strong>
+
+                <small>
+                    Restaurant Admin
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav
+            class="admin-nav"
+            aria-label="Restaurant admin navigation"
+        >
+
+            <span class="admin-nav__label">
+                [NAVIGATION LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/restaurant-info.html"
+                class="admin-nav__item is-active"
+            >
+                <span class="admin-nav__icon">◎</span>
+                <span>Restaurant Info</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/categories.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◫</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/menu.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">≡</span>
+                <span>Menu</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/appearance.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">✦</span>
+                <span>Appearance</span>
+            </a>
+
+
+            <span class="admin-nav__label">
+                [MANAGEMENT LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/activity.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/settings.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/account.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">○</span>
+                <span>Account</span>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar__bottom">
+
+            <a
+                href="/pages/restaurant/index.html"
+                class="admin-view-site"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ↗ View Restaurant Website
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-logout"
+                id="admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="admin-sidebar-overlay"
+        hidden
+    ></div>
+
+
+    <!-- MAIN -->
+
+    <div class="admin-main">
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar__left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="admin-menu-button"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+                <div>
+
+                    <span class="admin-topbar__eyebrow">
+                        [RESTAURANT INFORMATION LABEL]
+                    </span>
+
+                    <h1>
+                        Restaurant Information
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar__right">
+
+                <a
+                    href="/pages/restaurant/index.html"
+                    class="admin-topbar-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Menu
+                </a>
+
+                <button
+                    type="button"
+                    class="admin-profile-button"
+                    id="admin-profile-button"
+                    aria-label="Open account"
+                >
+                    A
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <main class="admin-content">
+
+
+            <!-- INTRO -->
+
+            <section
+                class="admin-welcome glass reveal"
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [INFORMATION LABEL]
+                    </span>
+
+                    <h2>
+                        Your Restaurant
+                    </h2>
+
+                    <p>
+                        [RESTAURANT INFORMATION DESCRIPTION]
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- BASIC INFORMATION -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [BASIC INFORMATION LABEL]
+                        </span>
+
+                        <h2>
+                            Basic Information
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="restaurant-info-form"
+                    class="admin-form glass"
+                    novalidate
+                >
+
+                    <div class="admin-form-grid">
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-name">
+                                Restaurant Name
+                            </label>
+
+                            <input
+                                id="restaurant-name"
+                                name="name"
+                                type="text"
+                                placeholder="[RESTAURANT NAME]"
+                                required
+                            >
+
+                            <small
+                                class="form-error"
+                                data-error-for="name"
+                            ></small>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-tagline">
+                                Tagline
+                            </label>
+
+                            <input
+                                id="restaurant-tagline"
+                                name="tagline"
+                                type="text"
+                                placeholder="[OPTIONAL TAGLINE]"
+                            >
+
+                        </div>
+
+
+                        <div class="form-field admin-form-grid--full">
+
+                            <label for="restaurant-description">
+                                Restaurant Description
+                            </label>
+
+                            <textarea
+                                id="restaurant-description"
+                                name="description"
+                                rows="5"
+                                placeholder="[OPTIONAL RESTAURANT DESCRIPTION]"
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-phone">
+                                Phone Number
+                            </label>
+
+                            <input
+                                id="restaurant-phone"
+                                name="phone"
+                                type="tel"
+                                placeholder="[PHONE NUMBER]"
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-email">
+                                Email
+                            </label>
+
+                            <input
+                                id="restaurant-email"
+                                name="email"
+                                type="email"
+                                placeholder="[EMAIL ADDRESS]"
+                            >
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        id="restaurant-info-message"
+                        class="auth-message"
+                        hidden
+                    ></div>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-secondary"
+                            id="restaurant-info-reset"
+                        >
+                            Reset
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Changes
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- LOCATION -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [LOCATION LABEL]
+                        </span>
+
+                        <h2>
+                            Location
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="restaurant-location-form"
+                    class="admin-form glass"
+                >
+
+                    <div class="admin-form-grid">
+
+
+                        <div class="form-field admin-form-grid--full">
+
+                            <label for="restaurant-address">
+                                Address
+                            </label>
+
+                            <textarea
+                                id="restaurant-address"
+                                name="address"
+                                rows="3"
+                                placeholder="[RESTAURANT ADDRESS]"
+                            ></textarea>
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-city">
+                                City
+                            </label>
+
+                            <input
+                                id="restaurant-city"
+                                name="city"
+                                type="text"
+                                placeholder="[CITY]"
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-state">
+                                State
+                            </label>
+
+                            <input
+                                id="restaurant-state"
+                                name="state"
+                                type="text"
+                                placeholder="[STATE]"
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-pincode">
+                                PIN Code
+                            </label>
+
+                            <input
+                                id="restaurant-pincode"
+                                name="pincode"
+                                type="text"
+                                inputmode="numeric"
+                                placeholder="[PIN CODE]"
+                            >
+
+                        </div>
+
+
+                        <div class="form-field">
+
+                            <label for="restaurant-map">
+                                Google Maps Link
+                            </label>
+
+                            <input
+                                id="restaurant-map"
+                                name="mapUrl"
+                                type="url"
+                                placeholder="[GOOGLE MAPS URL]"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Location
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- OPERATING HOURS -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [HOURS LABEL]
+                        </span>
+
+                        <h2>
+                            Opening Hours
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="restaurant-hours-form"
+                    class="admin-form glass"
+                >
+
+                    <div
+                        class="admin-hours-list"
+                        id="restaurant-hours-list"
+                    >
+
+                        <!-- Generated by JavaScript -->
+
+                    </div>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Opening Hours
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- BRANDING -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [BRANDING LABEL]
+                        </span>
+
+                        <h2>
+                            Restaurant Branding
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-info-card glass">
+
+                    <div class="admin-info-card__icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Logo & Images
+                        </h3>
+
+                        <p>
+                            [BRANDING IMAGE DESCRIPTION]
+                        </p>
+
+                    </div>
+
+                    <a
+                        href="/pages/restaurant-admin/appearance.html"
+                        class="btn btn-secondary"
+                    >
+                        Manage Appearance
+                    </a>
+
+                </div>
+
+            </section>
+
+
+            <!-- SAVE STATUS -->
+
+            <div
+                id="restaurant-info-toast"
+                class="admin-toast"
+                hidden
+            ></div>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            class="admin-back-button"
+            id="admin-back-button"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+<script
+    type="module"
+    src="/js/admin/restaurant.js"
+></script>
+
+</body>
+
+</html>

@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[SETTINGS PAGE DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+<div class="admin-app">
+
+
+    <!-- SIDEBAR -->
+
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar__top">
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>
+                    CZ Menu
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="admin-sidebar-close"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-sidebar__restaurant">
+
+            <div
+                class="admin-restaurant-avatar"
+                id="admin-restaurant-avatar"
+            >
+                R
+            </div>
+
+            <div>
+
+                <strong id="admin-restaurant-name">
+                    [RESTAURANT NAME]
+                </strong>
+
+                <small>
+                    Restaurant Admin
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav
+            class="admin-nav"
+            aria-label="Restaurant admin navigation"
+        >
+
+            <span class="admin-nav__label">
+                [NAVIGATION LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/restaurant-info.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◎</span>
+                <span>Restaurant Info</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/categories.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◫</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/menu.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">≡</span>
+                <span>Menu</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/appearance.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">✦</span>
+                <span>Appearance</span>
+            </a>
+
+
+            <span class="admin-nav__label">
+                [MANAGEMENT LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/activity.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/settings.html"
+                class="admin-nav__item is-active"
+            >
+                <span class="admin-nav__icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/account.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">○</span>
+                <span>Account</span>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar__bottom">
+
+            <a
+                href="/pages/restaurant/index.html"
+                class="admin-view-site"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ↗ View Restaurant Website
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-logout"
+                id="admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="admin-sidebar-overlay"
+        hidden
+    ></div>
+
+
+    <!-- MAIN -->
+
+    <div class="admin-main">
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar__left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="admin-menu-button"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+                <div>
+
+                    <span class="admin-topbar__eyebrow">
+                        [SETTINGS LABEL]
+                    </span>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="admin-content">
+
+
+            <section class="admin-welcome glass reveal">
+
+                <div>
+
+                    <span class="section-label">
+                        [SETTINGS LABEL]
+                    </span>
+
+                    <h2>
+                        Restaurant Settings
+                    </h2>
+
+                    <p>
+                        [SETTINGS PAGE DESCRIPTION]
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- WEBSITE -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [WEBSITE SETTINGS LABEL]
+                        </span>
+
+                        <h2>
+                            Website
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="website-settings-form"
+                    class="admin-form glass"
+                >
+
+                    <label class="admin-option-card">
+
+                        <div>
+
+                            <strong>
+                                Website Enabled
+                            </strong>
+
+                            <span>
+                                [WEBSITE ENABLED DESCRIPTION]
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="checkbox"
+                            id="website-enabled"
+                            checked
+                        >
+
+                    </label>
+
+
+                    <label class="admin-option-card">
+
+                        <div>
+
+                            <strong>
+                                Show Unavailable Items
+                            </strong>
+
+                            <span>
+                                [UNAVAILABLE ITEM DISPLAY DESCRIPTION]
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="checkbox"
+                            id="show-unavailable"
+                            checked
+                        >
+
+                    </label>
+
+
+                    <label class="admin-option-card">
+
+                        <div>
+
+                            <strong>
+                                Enable Menu Search
+                            </strong>
+
+                            <span>
+                                [MENU SEARCH DESCRIPTION]
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="checkbox"
+                            id="menu-search-enabled"
+                            checked
+                        >
+
+                    </label>
+
+
+                    <label class="admin-option-card">
+
+                        <div>
+
+                            <strong>
+                                Enable Veg / Non-Veg Filters
+                            </strong>
+
+                            <span>
+                                [MENU FILTER DESCRIPTION]
+                            </span>
+
+                        </div>
+
+                        <input
+                            type="checkbox"
+                            id="menu-filters-enabled"
+                            checked
+                        >
+
+                    </label>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Website Settings
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- QR -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [QR LABEL]
+                        </span>
+
+                        <h2>
+                            QR Menu
+                        </h2>
+
+                        <p>
+                            [QR SETTINGS DESCRIPTION]
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-info-card glass">
+
+                    <div class="admin-info-card__icon">
+                        ▦
+                    </div>
+
+                    <div>
+
+                        <h3>
+                            Restaurant QR Menu
+                        </h3>
+
+                        <p>
+                            [QR INFORMATION]
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-secondary"
+                        id="copy-menu-url"
+                    >
+                        Copy Menu Link
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- DANGER -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [DANGER ZONE LABEL]
+                        </span>
+
+                        <h2>
+                            Advanced
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="
+                        admin-danger-card
+                        glass
+                    "
+                >
+
+                    <div>
+
+                        <h3>
+                            Reset Website Settings
+                        </h3>
+
+                        <p>
+                            [RESET SETTINGS DESCRIPTION]
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="
+                            btn
+                            btn-danger
+                        "
+                        id="reset-settings"
+                    >
+                        Reset Settings
+                    </button>
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            class="admin-back-button"
+            id="admin-back-button"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    id="settings-toast"
+    class="admin-toast"
+    hidden
+></div>
+
+
+<script
+    type="module"
+    src="/js/admin/settings.js"
+></script>
+
+</body>
+
+</html>

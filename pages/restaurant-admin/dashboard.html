@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[RESTAURANT ADMIN DASHBOARD DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+    <!-- =================================================
+         ADMIN APP
+         ================================================= -->
+
+    <div class="admin-app">
+
+
+        <!-- =============================================
+             SIDEBAR
+             ============================================= -->
+
+        <aside
+            class="admin-sidebar"
+            id="admin-sidebar"
+        >
+
+            <div class="admin-sidebar__top">
+
+
+                <a
+                    href="/pages/restaurant-admin/dashboard.html"
+                    class="admin-brand"
+                >
+
+                    <img
+                        src="/assets/logo/cz-logo-mark.svg"
+                        alt="CZ"
+                    >
+
+                    <span>
+                        CZ Menu
+                    </span>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="admin-sidebar-close"
+                    id="admin-sidebar-close"
+                    aria-label="Close navigation"
+                >
+                    ×
+                </button>
+
+
+            </div>
+
+
+            <!-- RESTAURANT -->
+            <div class="admin-sidebar__restaurant">
+
+                <div
+                    class="admin-restaurant-avatar"
+                    id="admin-restaurant-avatar"
+                >
+                    [R]
+                </div>
+
+                <div>
+
+                    <strong
+                        id="admin-restaurant-name"
+                    >
+                        [RESTAURANT NAME]
+                    </strong>
+
+                    <small>
+                        Restaurant Admin
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- NAVIGATION -->
+            <nav
+                class="admin-nav"
+                aria-label="Restaurant admin navigation"
+            >
+
+                <span class="admin-nav__label">
+                    [NAVIGATION LABEL]
+                </span>
+
+
+                <a
+                    href="/pages/restaurant-admin/dashboard.html"
+                    class="admin-nav__item is-active"
+                    data-admin-page="dashboard"
+                >
+
+                    <span class="admin-nav__icon">
+                        ◈
+                    </span>
+
+                    <span>
+                        Dashboard
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/pages/restaurant-admin/restaurant-info.html"
+                    class="admin-nav__item"
+                    data-admin-page="restaurant-info"
+                >
+
+                    <span class="admin-nav__icon">
+                        ◎
+                    </span>
+
+                    <span>
+                        Restaurant Info
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/pages/restaurant-admin/categories.html"
+                    class="admin-nav__item"
+                    data-admin-page="categories"
+                >
+
+                    <span class="admin-nav__icon">
+                        ◫
+                    </span>
+
+                    <span>
+                        Categories
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/pages/restaurant-admin/menu.html"
+                    class="admin-nav__item"
+                    data-admin-page="menu"
+                >
+
+                    <span class="admin-nav__icon">
+                        ≡
+                    </span>
+
+                    <span>
+                        Menu
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/pages/restaurant-admin/appearance.html"
+                    class="admin-nav__item"
+                    data-admin-page="appearance"
+                >
+
+                    <span class="admin-nav__icon">
+                        ✦
+                    </span>
+
+                    <span>
+                        Appearance
+                    </span>
+
+                </a>
+
+
+                <span class="admin-nav__label">
+                    [MANAGEMENT LABEL]
+                </span>
+
+
+                <a
+                    href="/pages/restaurant-admin/activity.html"
+                    class="admin-nav__item"
+                    data-admin-page="activity"
+                >
+
+                    <span class="admin-nav__icon">
+                        ◷
+                    </span>
+
+                    <span>
+                        Activity
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/pages/restaurant-admin/settings.html"
+                    class="admin-nav__item"
+                    data-admin-page="settings"
+                >
+
+                    <span class="admin-nav__icon">
+                        ⚙
+                    </span>
+
+                    <span>
+                        Settings
+                    </span>
+
+                </a>
+
+
+                <a
+                    href="/pages/restaurant-admin/account.html"
+                    class="admin-nav__item"
+                    data-admin-page="account"
+                >
+
+                    <span class="admin-nav__icon">
+                        ○
+                    </span>
+
+                    <span>
+                        Account
+                    </span>
+
+                </a>
+
+            </nav>
+
+
+            <div class="admin-sidebar__bottom">
+
+                <a
+                    href="/pages/restaurant/index.html"
+                    class="admin-view-site"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <span>
+                        ↗
+                    </span>
+
+                    View Restaurant Website
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="admin-logout"
+                    id="admin-logout"
+                >
+
+                    <span>
+                        ⇥
+                    </span>
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- =============================================
+             MOBILE OVERLAY
+             ============================================= -->
+
+        <div
+            class="admin-sidebar-overlay"
+            id="admin-sidebar-overlay"
+            hidden
+        ></div>
+
+
+        <!-- =============================================
+             MAIN
+             ============================================= -->
+
+        <div class="admin-main">
+
+
+            <!-- TOP BAR -->
+            <header class="admin-topbar">
+
+                <div class="admin-topbar__left">
+
+                    <button
+                        type="button"
+                        class="admin-menu-button"
+                        id="admin-menu-button"
+                        aria-label="Open navigation"
+                    >
+                        ☰
+                    </button>
+
+
+                    <div>
+
+                        <span class="admin-topbar__eyebrow">
+                            [DASHBOARD EYEBROW]
+                        </span>
+
+                        <h1>
+                            Dashboard
+                        </h1>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-topbar__right">
+
+                    <a
+                        href="/pages/restaurant/index.html"
+                        class="admin-topbar-action"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View Menu
+                    </a>
+
+
+                    <button
+                        type="button"
+                        class="admin-profile-button"
+                        id="admin-profile-button"
+                        aria-label="Open account"
+                    >
+
+                        <span
+                            id="admin-profile-avatar"
+                        >
+                            A
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- CONTENT -->
+            <main class="admin-content">
+
+
+                <!-- WELCOME -->
+                <section
+                    class="
+                        admin-welcome
+                        glass
+                        reveal
+                    "
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            [WELCOME LABEL]
+                        </span>
+
+                        <h2>
+                            Welcome back,
+                            <span id="admin-owner-name">
+                                [OWNER NAME]
+                            </span>
+                        </h2>
+
+                        <p>
+                            [WELCOME DESCRIPTION]
+                        </p>
+
+                    </div>
+
+
+                    <div class="admin-welcome__status">
+
+                        <span
+                            class="admin-status-dot"
+                            id="admin-status-dot"
+                        ></span>
+
+                        <span
+                            id="admin-status-text"
+                        >
+                            [WEBSITE STATUS]
+                        </span>
+
+                    </div>
+
+                </section>
+
+
+                <!-- STATISTICS -->
+                <section
+                    class="
+                        admin-stat-grid
+                        reveal
+                    "
+                >
+
+
+                    <article
+                        class="
+                            admin-stat-card
+                            glass
+                        "
+                    >
+
+                        <div class="admin-stat-card__icon">
+                            ≡
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Menu Items
+                            </span>
+
+                            <strong
+                                id="stat-menu-items"
+                            >
+                                0
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="
+                            admin-stat-card
+                            glass
+                        "
+                    >
+
+                        <div class="admin-stat-card__icon">
+                            ◫
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Categories
+                            </span>
+
+                            <strong
+                                id="stat-categories"
+                            >
+                                0
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="
+                            admin-stat-card
+                            glass
+                        "
+                    >
+
+                        <div class="admin-stat-card__icon">
+                            ✓
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Available Items
+                            </span>
+
+                            <strong
+                                id="stat-available"
+                            >
+                                0
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                    <article
+                        class="
+                            admin-stat-card
+                            glass
+                        "
+                    >
+
+                        <div class="admin-stat-card__icon">
+                            ◉
+                        </div>
+
+                        <div>
+
+                            <span>
+                                Website
+                            </span>
+
+                            <strong
+                                id="stat-website-status"
+                            >
+                                [STATUS]
+                            </strong>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+                <!-- QUICK ACTIONS -->
+                <section class="admin-section">
+
+                    <div class="admin-section-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                [QUICK ACTION LABEL]
+                            </span>
+
+                            <h2>
+                                Quick Actions
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-action-grid">
+
+
+                        <a
+                            href="/pages/restaurant-admin/menu.html"
+                            class="
+                                admin-action-card
+                                glass
+                            "
+                        >
+
+                            <span class="admin-action-card__icon">
+                                +
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Add Menu Item
+                                </h3>
+
+                                <p>
+                                    [ADD MENU DESCRIPTION]
+                                </p>
+
+                            </div>
+
+                            <span class="admin-action-card__arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="/pages/restaurant-admin/categories.html"
+                            class="
+                                admin-action-card
+                                glass
+                            "
+                        >
+
+                            <span class="admin-action-card__icon">
+                                ◫
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Manage Categories
+                                </h3>
+
+                                <p>
+                                    [CATEGORY MANAGEMENT DESCRIPTION]
+                                </p>
+
+                            </div>
+
+                            <span class="admin-action-card__arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="/pages/restaurant-admin/appearance.html"
+                            class="
+                                admin-action-card
+                                glass
+                            "
+                        >
+
+                            <span class="admin-action-card__icon">
+                                ✦
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Customize Website
+                                </h3>
+
+                                <p>
+                                    [APPEARANCE DESCRIPTION]
+                                </p>
+
+                            </div>
+
+                            <span class="admin-action-card__arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="/pages/restaurant-admin/restaurant-info.html"
+                            class="
+                                admin-action-card
+                                glass
+                            "
+                        >
+
+                            <span class="admin-action-card__icon">
+                                ◎
+                            </span>
+
+                            <div>
+
+                                <h3>
+                                    Restaurant Information
+                                </h3>
+
+                                <p>
+                                    [RESTAURANT INFO DESCRIPTION]
+                                </p>
+
+                            </div>
+
+                            <span class="admin-action-card__arrow">
+                                →
+                            </span>
+
+                        </a>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- WEBSITE STATUS -->
+                <section class="admin-section">
+
+                    <div
+                        class="
+                            admin-dashboard-grid
+                        "
+                    >
+
+
+                        <article
+                            class="
+                                admin-panel
+                                glass
+                            "
+                        >
+
+                            <div
+                                class="
+                                    admin-panel__header
+                                "
+                            >
+
+                                <div>
+
+                                    <span class="section-label">
+                                        [WEBSITE PANEL LABEL]
+                                    </span>
+
+                                    <h2>
+                                        Website Status
+                                    </h2>
+
+                                </div>
+
+                                <a
+                                    href="/pages/restaurant-admin/appearance.html"
+                                    class="admin-panel-link"
+                                >
+                                    Manage
+                                </a>
+
+                            </div>
+
+
+                            <div
+                                class="
+                                    admin-website-status
+                                "
+                            >
+
+                                <div
+                                    class="
+                                        admin-website-status__visual
+                                    "
+                                    id="dashboard-website-status"
+                                >
+
+                                    <span>
+                                        [STATUS]
+                                    </span>
+
+                                </div>
+
+
+                                <div>
+
+                                    <h3
+                                        id="dashboard-website-title"
+                                    >
+                                        [WEBSITE TITLE]
+                                    </h3>
+
+                                    <p
+                                        id="dashboard-website-description"
+                                    >
+                                        [WEBSITE STATUS DESCRIPTION]
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div
+                                class="
+                                    admin-website-meta
+                                "
+                            >
+
+                                <div>
+
+                                    <span>
+                                        Template
+                                    </span>
+
+                                    <strong
+                                        id="dashboard-template"
+                                    >
+                                        [TEMPLATE]
+                                    </strong>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span>
+                                        Theme
+                                    </span>
+
+                                    <strong
+                                        id="dashboard-theme"
+                                    >
+                                        [THEME]
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- RECENT ACTIVITY -->
+                        <article
+                            class="
+                                admin-panel
+                                glass
+                            "
+                        >
+
+                            <div
+                                class="
+                                    admin-panel__header
+                                "
+                            >
+
+                                <div>
+
+                                    <span class="section-label">
+                                        [ACTIVITY LABEL]
+                                    </span>
+
+                                    <h2>
+                                        Recent Activity
+                                    </h2>
+
+                                </div>
+
+                                <a
+                                    href="/pages/restaurant-admin/activity.html"
+                                    class="admin-panel-link"
+                                >
+                                    View All
+                                </a>
+
+                            </div>
+
+
+                            <div
+                                class="
+                                    admin-activity-list
+                                "
+                                id="dashboard-activity"
+                            >
+
+                                <div
+                                    class="
+                                        admin-activity-empty
+                                    "
+                                >
+
+                                    <span>
+                                        ◷
+                                    </span>
+
+                                    <p>
+                                        [NO ACTIVITY MESSAGE]
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+                <!-- PUBLISH -->
+                <section
+                    class="
+                        admin-publish-panel
+                        glass
+                    "
+                >
+
+                    <div>
+
+                        <span class="section-label">
+                            [PUBLISH LABEL]
+                        </span>
+
+                        <h2>
+                            Publish Your Changes
+                        </h2>
+
+                        <p>
+                            [PUBLISH DESCRIPTION]
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="
+                            btn
+                            btn-primary
+                        "
+                        id="dashboard-publish-button"
+                    >
+                        Publish
+                    </button>
+
+                </section>
+
+
+            </main>
+
+
+            <!-- MOBILE BACK / NAV -->
+            <button
+                type="button"
+                class="admin-back-button"
+                id="admin-back-button"
+            >
+                ← Back
+            </button>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- TOAST -->
+    <div
+        id="admin-dashboard-toast"
+        class="admin-toast"
+        hidden
+    ></div>
+
+
+    <script
+        type="module"
+        src="/js/admin/dashboard.js"
+    ></script>
+
+</body>
+
+</html>

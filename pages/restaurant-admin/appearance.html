@@ -1,0 +1,925 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Appearance | CZ Menu</title>
+
+    <meta
+        name="description"
+        content="[APPEARANCE PAGE DESCRIPTION]"
+    >
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="admin-site">
+
+<div class="admin-app">
+
+
+    <!-- =================================================
+         SIDEBAR
+         ================================================= -->
+
+    <aside
+        class="admin-sidebar"
+        id="admin-sidebar"
+    >
+
+        <div class="admin-sidebar__top">
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>
+                    CZ Menu
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-sidebar-close"
+                id="admin-sidebar-close"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="admin-sidebar__restaurant">
+
+            <div
+                class="admin-restaurant-avatar"
+                id="admin-restaurant-avatar"
+            >
+                R
+            </div>
+
+            <div>
+
+                <strong id="admin-restaurant-name">
+                    [RESTAURANT NAME]
+                </strong>
+
+                <small>
+                    Restaurant Admin
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <nav
+            class="admin-nav"
+            aria-label="Restaurant admin navigation"
+        >
+
+            <span class="admin-nav__label">
+                [NAVIGATION LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/dashboard.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/restaurant-info.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◎</span>
+                <span>Restaurant Info</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/categories.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◫</span>
+                <span>Categories</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/menu.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">≡</span>
+                <span>Menu</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/appearance.html"
+                class="admin-nav__item is-active"
+            >
+                <span class="admin-nav__icon">✦</span>
+                <span>Appearance</span>
+            </a>
+
+
+            <span class="admin-nav__label">
+                [MANAGEMENT LABEL]
+            </span>
+
+
+            <a
+                href="/pages/restaurant-admin/activity.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/settings.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+            <a
+                href="/pages/restaurant-admin/account.html"
+                class="admin-nav__item"
+            >
+                <span class="admin-nav__icon">○</span>
+                <span>Account</span>
+            </a>
+
+        </nav>
+
+
+        <div class="admin-sidebar__bottom">
+
+            <a
+                href="/pages/restaurant/index.html"
+                class="admin-view-site"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                ↗ View Restaurant Website
+            </a>
+
+
+            <button
+                type="button"
+                class="admin-logout"
+                id="admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        class="admin-sidebar-overlay"
+        id="admin-sidebar-overlay"
+        hidden
+    ></div>
+
+
+    <!-- =================================================
+         MAIN
+         ================================================= -->
+
+    <div class="admin-main">
+
+
+        <header class="admin-topbar">
+
+            <div class="admin-topbar__left">
+
+                <button
+                    type="button"
+                    class="admin-menu-button"
+                    id="admin-menu-button"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span class="admin-topbar__eyebrow">
+                        [APPEARANCE LABEL]
+                    </span>
+
+                    <h1>
+                        Appearance
+                    </h1>
+
+                </div>
+
+            </div>
+
+
+            <div class="admin-topbar__right">
+
+                <a
+                    href="/pages/restaurant/index.html"
+                    class="admin-topbar-action"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Preview Website
+                </a>
+
+            </div>
+
+        </header>
+
+
+        <main class="admin-content">
+
+
+            <!-- =================================================
+                 INTRO
+                 ================================================= -->
+
+            <section
+                class="
+                    admin-welcome
+                    glass
+                    reveal
+                "
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [DESIGN LABEL]
+                    </span>
+
+                    <h2>
+                        Make Your Menu Yours
+                    </h2>
+
+                    <p>
+                        [APPEARANCE PAGE DESCRIPTION]
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 TEMPLATE
+                 ================================================= -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [LAYOUT LABEL]
+                        </span>
+
+                        <h2>
+                            Choose a Layout
+                        </h2>
+
+                        <p>
+                            [TEMPLATE SELECTION DESCRIPTION]
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="template-grid"
+                    class="admin-template-grid"
+                >
+
+                    <!-- Generated from js/config/templates.js -->
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 THEME
+                 ================================================= -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [THEME LABEL]
+                        </span>
+
+                        <h2>
+                            Choose a Theme
+                        </h2>
+
+                        <p>
+                            [THEME SELECTION DESCRIPTION]
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="theme-grid"
+                    class="admin-theme-grid"
+                >
+
+                    <!-- Generated from js/config/themes.js -->
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 BRANDING
+                 ================================================= -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [BRANDING LABEL]
+                        </span>
+
+                        <h2>
+                            Branding
+                        </h2>
+
+                        <p>
+                            [BRANDING DESCRIPTION]
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="appearance-branding-form"
+                    class="
+                        admin-form
+                        glass
+                    "
+                >
+
+                    <div class="admin-form-grid">
+
+
+                        <div
+                            class="
+                                form-field
+                                admin-form-grid--full
+                            "
+                        >
+
+                            <label for="restaurant-logo">
+                                Restaurant Logo
+                            </label>
+
+                            <input
+                                id="restaurant-logo"
+                                type="url"
+                                placeholder="[LOGO IMAGE URL]"
+                                autocomplete="off"
+                            >
+
+                            <input
+                                id="restaurant-logo-file"
+                                type="file"
+                                accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                            >
+
+                            <div
+                                id="restaurant-logo-upload-progress"
+                                class="form-help"
+                                hidden
+                            ></div>
+
+                            <small class="form-help">
+                                [LOGO IMAGE HELP]
+                            </small>
+
+                        </div>
+
+
+                        <div
+                            class="
+                                form-field
+                                admin-form-grid--full
+                            "
+                        >
+
+                            <label for="restaurant-cover">
+                                Cover / Hero Image
+                            </label>
+
+                            <input
+                                id="restaurant-cover"
+                                type="url"
+                                placeholder="[COVER IMAGE URL]"
+                                autocomplete="off"
+                            >
+
+                            <input
+                                id="restaurant-cover-file"
+                                type="file"
+                                accept="image/jpeg,image/png,image/webp,image/gif,image/avif"
+                            >
+
+                            <div
+                                id="restaurant-cover-upload-progress"
+                                class="form-help"
+                                hidden
+                            ></div>
+
+                            <small class="form-help">
+                                [COVER IMAGE HELP]
+                            </small>
+
+                        </div>
+
+
+                    </div>
+
+
+                    <div
+                        id="branding-preview"
+                        class="appearance-image-preview"
+                        hidden
+                    >
+
+                        <div>
+
+                            <span>
+                                Logo Preview
+                            </span>
+
+                            <img
+                                id="logo-preview"
+                                src=""
+                                alt="[LOGO PREVIEW ALT]"
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <span>
+                                Cover Preview
+                            </span>
+
+                            <img
+                                id="cover-preview"
+                                src=""
+                                alt="[COVER PREVIEW ALT]"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Branding
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- =================================================
+                 DISPLAY OPTIONS
+                 ================================================= -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [DISPLAY LABEL]
+                        </span>
+
+                        <h2>
+                            Display Options
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="appearance-display-form"
+                    class="
+                        admin-form
+                        glass
+                    "
+                >
+
+                    <div class="admin-display-options">
+
+
+                        <label
+                            class="admin-option-card"
+                        >
+
+                            <div>
+
+                                <strong>
+                                    Show Restaurant Description
+                                </strong>
+
+                                <span>
+                                    [DESCRIPTION DISPLAY HELP]
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="show-description"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label
+                            class="admin-option-card"
+                        >
+
+                            <div>
+
+                                <strong>
+                                    Show Contact Information
+                                </strong>
+
+                                <span>
+                                    [CONTACT DISPLAY HELP]
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="show-contact"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label
+                            class="admin-option-card"
+                        >
+
+                            <div>
+
+                                <strong>
+                                    Show Opening Hours
+                                </strong>
+
+                                <span>
+                                    [HOURS DISPLAY HELP]
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="show-hours"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label
+                            class="admin-option-card"
+                        >
+
+                            <div>
+
+                                <strong>
+                                    Show Item Images
+                                </strong>
+
+                                <span>
+                                    [ITEM IMAGE DISPLAY HELP]
+                                </span>
+
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="show-item-images"
+                                checked
+                            >
+
+                        </label>
+
+
+                    </div>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Display Settings
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </section>
+
+
+            <!-- =================================================
+                 LIVE PREVIEW
+                 ================================================= -->
+
+            <section class="admin-section">
+
+                <div class="admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [PREVIEW LABEL]
+                        </span>
+
+                        <h2>
+                            Preview
+                        </h2>
+
+                        <p>
+                            [PREVIEW DESCRIPTION]
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="
+                        appearance-preview
+                        glass
+                    "
+                >
+
+                    <div
+                        class="
+                            appearance-preview__bar
+                        "
+                    >
+
+                        <span>
+                            [PREVIEW DEVICE LABEL]
+                        </span>
+
+
+                        <div>
+
+                            <button
+                                type="button"
+                                class="appearance-device active"
+                                data-device="mobile"
+                            >
+                                Mobile
+                            </button>
+
+                            <button
+                                type="button"
+                                class="appearance-device"
+                                data-device="desktop"
+                            >
+                                Desktop
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="appearance-preview-frame"
+                        class="
+                            appearance-preview__frame
+                            is-mobile
+                        "
+                    >
+
+                        <div
+                            class="
+                                appearance-preview__placeholder
+                            "
+                        >
+
+                            <div>
+                                ✦
+                            </div>
+
+                            <h3>
+                                [PREVIEW PLACEHOLDER TITLE]
+                            </h3>
+
+                            <p>
+                                [PREVIEW PLACEHOLDER DESCRIPTION]
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="
+                            appearance-preview__actions
+                        "
+                    >
+
+                        <a
+                            href="/pages/restaurant/index.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn btn-primary"
+                        >
+                            Open Full Preview
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 SAVE
+                 ================================================= -->
+
+            <section
+                class="
+                    admin-publish-panel
+                    glass
+                "
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [SAVE LABEL]
+                    </span>
+
+                    <h2>
+                        Save Appearance
+                    </h2>
+
+                    <p>
+                        [SAVE APPEARANCE DESCRIPTION]
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="save-appearance-button"
+                >
+                    Save Changes
+                </button>
+
+            </section>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            class="admin-back-button"
+            id="admin-back-button"
+        >
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    id="appearance-toast"
+    class="admin-toast"
+    hidden
+></div>
+
+
+<script
+    type="module"
+    src="/js/admin/appearance.js"
+></script>
+
+</body>
+
+</html>
