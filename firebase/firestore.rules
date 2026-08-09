@@ -1,0 +1,292 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+
+    match /databases/{database}/documents {
+
+
+        /*
+        =================================================
+        HELPER FUNCTIONS
+        =================================================
+        */
+
+
+        function signedIn() {
+
+            return request.auth != null;
+
+        }
+
+
+        function currentUserId() {
+
+            return request.auth.uid;
+
+        }
+
+
+        function adminRecord() {
+
+            return get(
+                /databases/$(database)/documents/admins/$(currentUserId())
+            );
+
+        }
+
+
+        function isPlatformAdmin() {
+
+            return signedIn()
+                && adminRecord().data.role == "super_admin";
+
+        }
+
+
+        function isRestaurantAdmin(
+            restaurantId
+        ) {
+
+            return signedIn()
+                && adminRecord().data.restaurantId == restaurantId;
+
+        }
+
+
+        function canManageRestaurant(
+            restaurantId
+        ) {
+
+            return isPlatformAdmin()
+                || isRestaurantAdmin(
+                    restaurantId
+                );
+
+        }
+
+
+        /*
+        =================================================
+        ADMIN RECORDS
+        =================================================
+        */
+
+
+        match /admins/{uid} {
+
+            allow read:
+                if signedIn()
+                && (
+                    currentUserId() == uid
+                    || isPlatformAdmin()
+                );
+
+
+            allow create:
+                if signedIn()
+                && (
+                    currentUserId() == uid
+                    || isPlatformAdmin()
+                );
+
+
+            allow update:
+                if signedIn()
+                && (
+                    currentUserId() == uid
+                    || isPlatformAdmin()
+                );
+
+
+            allow delete:
+                if isPlatformAdmin();
+
+        }
+
+
+        /*
+        =================================================
+        RESTAURANTS
+        =================================================
+        */
+
+
+        match /restaurants/{restaurantId} {
+
+
+            /*
+            Public restaurant websites only read
+            restaurants explicitly marked as published.
+            */
+
+
+            allow get:
+                if resource.data.published == true
+                || canManageRestaurant(
+                    restaurantId
+                );
+
+
+            allow list:
+                if false;
+
+
+            allow create:
+                if signedIn()
+                && (
+                    isPlatformAdmin()
+                    || isRestaurantAdmin(
+                        restaurantId
+                    )
+                );
+
+
+            allow update:
+                if canManageRestaurant(
+                    restaurantId
+                );
+
+
+            allow delete:
+                if isPlatformAdmin();
+
+
+            /*
+            =================================================
+            CATEGORIES
+            =================================================
+            */
+
+
+            match /categories/{categoryId} {
+
+                allow read:
+                    if canManageRestaurant(
+                        restaurantId
+                    )
+                    || get(
+                        /databases/$(database)/documents/restaurants/$(restaurantId)
+                    ).data.published == true;
+
+
+                allow create:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+
+                allow update:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+
+                allow delete:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+            }
+
+
+            /*
+            =================================================
+            MENU
+            =================================================
+            */
+
+
+            match /menu/{itemId} {
+
+                allow read:
+                    if canManageRestaurant(
+                        restaurantId
+                    )
+                    || get(
+                        /databases/$(database)/documents/restaurants/$(restaurantId)
+                    ).data.published == true;
+
+
+                allow create:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+
+                allow update:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+
+                allow delete:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+            }
+
+
+            /*
+            =================================================
+            ACTIVITY
+            =================================================
+            */
+
+
+            match /activity/{activityId} {
+
+                allow read:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+
+                allow create:
+                    if canManageRestaurant(
+                        restaurantId
+                    );
+
+
+                allow update:
+                    if false;
+
+
+                allow delete:
+                    if isPlatformAdmin();
+
+            }
+
+        }
+
+
+        /*
+        =================================================
+        DENY EVERYTHING ELSE
+        =================================================
+        */
+
+
+        match /{document=**} {
+
+            allow read, write:
+                if false;
+
+        }
+        match /platform/{documentId} {
+
+            allow read:
+                if isPlatformAdmin();
+
+            allow create, update:
+                if isPlatformAdmin();
+
+            allow delete:
+                if false;
+
+        }
+
+    }
+
+}
