@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Super Admin Dashboard | CZ Menu</title>
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/super-admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/super-admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="super-admin-site">
+
+
+<div class="super-admin-app">
+
+
+    <aside
+        class="super-admin-sidebar"
+        id="super-admin-sidebar"
+    >
+
+        <div class="super-admin-sidebar__top">
+
+            <a
+                href="/pages/super-admin/dashboard.html"
+                class="super-admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>
+                    CZ Menu
+                </span>
+
+            </a>
+
+
+            <button
+                type="button"
+                id="super-sidebar-close"
+                class="super-sidebar-close"
+                aria-label="Close navigation"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="super-admin-role">
+
+            <span>
+                [PLATFORM ADMIN LABEL]
+            </span>
+
+            <strong>
+                Super Admin
+            </strong>
+
+        </div>
+
+
+        <nav class="super-admin-nav">
+
+
+            <a
+                href="/pages/super-admin/dashboard.html"
+                class="
+                    super-admin-nav__item
+                    is-active
+                "
+            >
+                <span>◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/restaurants.html"
+                class="super-admin-nav__item"
+            >
+                <span>◎</span>
+                <span>Restaurants</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/admins.html"
+                class="super-admin-nav__item"
+            >
+                <span>○</span>
+                <span>Admins</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/activity.html"
+                class="super-admin-nav__item"
+            >
+                <span>◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/settings.html"
+                class="super-admin-nav__item"
+            >
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+
+        </nav>
+
+
+        <div class="super-admin-sidebar__bottom">
+
+            <a
+                href="/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="super-admin-site-link"
+            >
+                ↗ View CZ Website
+            </a>
+
+
+            <button
+                type="button"
+                id="super-admin-logout"
+                class="super-admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        id="super-admin-overlay"
+        class="super-admin-overlay"
+        hidden
+    ></div>
+
+
+    <div class="super-admin-main">
+
+
+        <header class="super-admin-topbar">
+
+            <div class="super-admin-topbar__left">
+
+                <button
+                    type="button"
+                    id="super-sidebar-open"
+                    class="super-sidebar-open"
+                    aria-label="Open navigation"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span>
+                        [PLATFORM DASHBOARD LABEL]
+                    </span>
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="super-admin-content">
+
+
+            <section
+                class="
+                    super-admin-welcome
+                    glass
+                    reveal
+                "
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [PLATFORM LABEL]
+                    </span>
+
+                    <h2>
+                        CZ Menu Overview
+                    </h2>
+
+                    <p>
+                        [SUPER ADMIN DASHBOARD DESCRIPTION]
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section
+                id="super-statistics"
+                class="super-stat-grid"
+            >
+
+                <!-- Generated by dashboard.js -->
+
+            </section>
+
+
+            <section class="super-admin-section">
+
+                <div class="super-admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [RESTAURANTS LABEL]
+                        </span>
+
+                        <h2>
+                            Restaurants
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="/pages/super-admin/restaurants.html"
+                        class="btn btn-secondary"
+                    >
+                        View All
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="recent-restaurants"
+                    class="super-admin-list"
+                >
+
+                    <!-- Generated -->
+
+                </div>
+
+            </section>
+
+
+            <section class="super-admin-section">
+
+                <div class="super-admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [ACTIVITY LABEL]
+                        </span>
+
+                        <h2>
+                            Recent Platform Activity
+                        </h2>
+
+                    </div>
+
+
+                    <a
+                        href="/pages/super-admin/activity.html"
+                        class="btn btn-secondary"
+                    >
+                        View Activity
+                    </a>
+
+                </div>
+
+
+                <div
+                    id="recent-activity"
+                    class="super-admin-list"
+                >
+
+                    <!-- Generated -->
+
+                </div>
+
+            </section>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            id="super-admin-back"
+            class="super-admin-back"
+        >
+            ← Back
+        </button>
+
+
+    </div>
+
+
+</div>
+
+
+<div
+    id="super-dashboard-toast"
+    class="admin-toast"
+    hidden
+></div>
+
+
+<script
+    type="module"
+    src="/js/super-admin/dashboard.js"
+></script>
+
+</body>
+
+</html>

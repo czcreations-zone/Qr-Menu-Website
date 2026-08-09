@@ -1,0 +1,511 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Super Admin Settings | CZ Menu</title>
+
+    <link
+        rel="icon"
+        href="/assets/logo/cz-logo-mark.svg"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/global.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/components.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/animations.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/super-admin.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="/css/super-admin-responsive.css"
+    >
+
+</head>
+
+
+<body class="super-admin-site">
+
+
+<div class="super-admin-app">
+
+
+    <aside
+        class="super-admin-sidebar"
+        id="super-admin-sidebar"
+    >
+
+        <div class="super-admin-sidebar__top">
+
+            <a
+                href="/pages/super-admin/dashboard.html"
+                class="super-admin-brand"
+            >
+
+                <img
+                    src="/assets/logo/cz-logo-mark.svg"
+                    alt="CZ"
+                >
+
+                <span>CZ Menu</span>
+
+            </a>
+
+
+            <button
+                type="button"
+                id="super-sidebar-close"
+                class="super-sidebar-close"
+            >
+                ×
+            </button>
+
+        </div>
+
+
+        <div class="super-admin-role">
+
+            <span>
+                [PLATFORM ADMIN LABEL]
+            </span>
+
+            <strong>
+                Super Admin
+            </strong>
+
+        </div>
+
+
+        <nav class="super-admin-nav">
+
+            <a
+                href="/pages/super-admin/dashboard.html"
+                class="super-admin-nav__item"
+            >
+                <span>◈</span>
+                <span>Dashboard</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/restaurants.html"
+                class="super-admin-nav__item"
+            >
+                <span>◎</span>
+                <span>Restaurants</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/admins.html"
+                class="super-admin-nav__item"
+            >
+                <span>○</span>
+                <span>Admins</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/activity.html"
+                class="super-admin-nav__item"
+            >
+                <span>◷</span>
+                <span>Activity</span>
+            </a>
+
+
+            <a
+                href="/pages/super-admin/settings.html"
+                class="
+                    super-admin-nav__item
+                    is-active
+                "
+            >
+                <span>⚙</span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+
+        <div class="super-admin-sidebar__bottom">
+
+            <a
+                href="/index.html"
+                class="super-admin-site-link"
+                target="_blank"
+            >
+                ↗ View CZ Website
+            </a>
+
+
+            <button
+                type="button"
+                id="super-admin-logout"
+                class="super-admin-logout"
+            >
+                ⇥ Logout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <div
+        id="super-admin-overlay"
+        class="super-admin-overlay"
+        hidden
+    ></div>
+
+
+    <div class="super-admin-main">
+
+
+        <header class="super-admin-topbar">
+
+            <div class="super-admin-topbar__left">
+
+                <button
+                    type="button"
+                    id="super-sidebar-open"
+                    class="super-sidebar-open"
+                >
+                    ☰
+                </button>
+
+
+                <div>
+
+                    <span>
+                        [PLATFORM SETTINGS LABEL]
+                    </span>
+
+                    <h1>
+                        Settings
+                    </h1>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="super-admin-content">
+
+
+            <section
+                class="
+                    super-admin-welcome
+                    glass
+                    reveal
+                "
+            >
+
+                <div>
+
+                    <span class="section-label">
+                        [PLATFORM SETTINGS LABEL]
+                    </span>
+
+                    <h2>
+                        Platform Settings
+                    </h2>
+
+                    <p>
+                        [SUPER ADMIN SETTINGS DESCRIPTION]
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="super-admin-section">
+
+
+                <div class="super-admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [PLATFORM DISPLAY LABEL]
+                        </span>
+
+                        <h2>
+                            Platform Display
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <form
+                    id="platform-settings-form"
+                    class="admin-form glass"
+                >
+
+
+                    <div class="form-field">
+
+                        <label for="platform-name">
+                            Platform Name
+                        </label>
+
+                        <input
+                            id="platform-name"
+                            type="text"
+                            placeholder="[PLATFORM NAME]"
+                        >
+
+                    </div>
+
+
+                    <div class="form-field">
+
+                        <label for="platform-description">
+                            Platform Description
+                        </label>
+
+                        <textarea
+                            id="platform-description"
+                            rows="5"
+                            placeholder="[PLATFORM DESCRIPTION]"
+                        ></textarea>
+
+                    </div>
+
+
+                    <label class="admin-option-card">
+
+                        <div>
+
+                            <strong>
+                                Platform Active
+                            </strong>
+
+                            <span>
+                                [PLATFORM ACTIVE DESCRIPTION]
+                            </span>
+
+                        </div>
+
+                        <input
+                            id="platform-active"
+                            type="checkbox"
+                            checked
+                        >
+
+                    </label>
+
+
+                    <div class="admin-form-actions">
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary"
+                        >
+                            Save Platform Settings
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+            </section>
+
+
+            <section class="super-admin-section">
+
+
+                <div class="super-admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [SYSTEM INFORMATION LABEL]
+                        </span>
+
+                        <h2>
+                            System Information
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    class="
+                        super-system-info
+                        glass
+                    "
+                >
+
+                    <div>
+
+                        <span>
+                            Platform
+                        </span>
+
+                        <strong>
+                            CZ Menu
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Database
+                        </span>
+
+                        <strong>
+                            Firebase Firestore
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Authentication
+                        </span>
+
+                        <strong>
+                            Firebase Authentication
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>
+                            Image Storage
+                        </span>
+
+                        <strong>
+                            Cloudinary
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="super-admin-section">
+
+
+                <div class="super-admin-section-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            [SECURITY LABEL]
+                        </span>
+
+                        <h2>
+                            Security
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="admin-info-card glass">
+
+                    <div
+                        class="admin-info-card__icon"
+                    >
+                        ◉
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Super Admin Account
+                        </h3>
+
+                        <p>
+                            [SUPER ADMIN SECURITY DESCRIPTION]
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        id="settings-logout"
+                        class="btn btn-secondary"
+                    >
+                        Logout
+                    </button>
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+
+        <button
+            type="button"
+            id="super-admin-back"
+            class="super-admin-back"
+        >
+            ← Back
+        </button>
+
+
+    </div>
+
+</div>
+
+
+<script
+    type="module"
+    src="/js/super-admin/settings.js"
+></script>
+
+</body>
+
+</html>
